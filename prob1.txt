@@ -1,0 +1,46 @@
+Problem 1:
+
+$gcloud components list
+
+Output:
+
+Your current Cloud SDK version is: 254.0.0
+The latest available version is: 254.0.0
+
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                                 Components                                                 │
+├───────────────┬──────────────────────────────────────────────────────┬──────────────────────────┬──────────┤
+│     Status    │                         Name                         │            ID            │   Size   │
+├───────────────┼──────────────────────────────────────────────────────┼──────────────────────────┼──────────┤
+│ Not Installed │ App Engine Go Extensions                             │ app-engine-go            │ 56.6 MiB │
+│ Not Installed │ Cloud Bigtable Command Line Tool                     │ cbt                      │  6.4 MiB │
+│ Not Installed │ Cloud Bigtable Emulator                              │ bigtable                 │  6.6 MiB │
+│ Not Installed │ Cloud Datalab Command Line Tool                      │ datalab                  │  < 1 MiB │
+│ Not Installed │ Cloud Datastore Emulator                             │ cloud-datastore-emulator │ 18.4 MiB │
+│ Not Installed │ Cloud Datastore Emulator (Legacy)                    │ gcd-emulator             │ 38.1 MiB │
+│ Not Installed │ Cloud Firestore Emulator                             │ cloud-firestore-emulator │ 35.9 MiB │
+│ Not Installed │ Cloud Pub/Sub Emulator                               │ pubsub-emulator          │ 34.8 MiB │
+│ Not Installed │ Cloud SQL Proxy                                      │ cloud_sql_proxy          │  3.8 MiB │
+│ Not Installed │ Emulator Reverse Proxy                               │ emulator-reverse-proxy   │ 14.5 MiB │
+│ Not Installed │ Google Cloud Build Local Builder                     │ cloud-build-local        │  6.0 MiB │
+│ Not Installed │ Google Container Registry's Docker credential helper │ docker-credential-gcr    │  1.8 MiB │
+│ Not Installed │ gcloud app Java Extensions                           │ app-engine-java          │ 85.9 MiB │
+│ Not Installed │ gcloud app PHP Extensions                            │ app-engine-php           │          │
+│ Not Installed │ gcloud app Python Extensions                         │ app-engine-python        │  6.0 MiB │
+│ Not Installed │ gcloud app Python Extensions (Extra Libraries)       │ app-engine-python-extras │ 28.5 MiB │
+│ Installed     │ BigQuery Command Line Tool                           │ bq                       │  < 1 MiB │
+│ Installed     │ Cloud SDK Core Libraries                             │ core                     │ 11.1 MiB │
+│ Installed     │ Cloud Storage Command Line Tool                      │ gsutil                   │  3.6 MiB │
+│ Installed     │ gcloud Alpha Commands                                │ alpha                    │  < 1 MiB │
+│ Installed     │ gcloud Beta Commands                                 │ beta                     │  < 1 MiB │
+│ Installed     │ kubectl                                              │ kubectl                  │  < 1 MiB │
+└───────────────┴──────────────────────────────────────────────────────┴──────────────────────────┴──────────┘
+To install or remove components at your current SDK version [254.0.0], run:
+  $ gcloud components install COMPONENT_ID
+  $ gcloud components remove COMPONENT_ID
+
+To update your SDK installation to the latest version [254.0.0], run:
+  $ gcloud components update
+
+
+

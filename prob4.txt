@@ -1,0 +1,19 @@
+Problem 4:
+
+1. Create a custom service account
+	->Open the Service Accounts page in the GCP Console.
+    	-> Click Select a project(you're in the project selected already)
+	-> Click Create Service Account.
+	->Enter a service account name (friendly display name), an optional description, select a role you wish to grant to the service 	  account(Here: Read access to GCS), and then click Save.
+
+2. Create an instance for this service account
+	->Open compute engine -> vm instances
+	-> create instance
+	->Give a unique name to the instance
+	->set other configs as per need
+	->In Identify and API access
+		Select the service account previously created
+	->Create
+	
+	
+

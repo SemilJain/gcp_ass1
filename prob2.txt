@@ -1,0 +1,23 @@
+Problem2:
+
+->Create new configurations
+$gcloud config configurations create CONFIGURATION_NAME
+
+->set properties for the created configuration 
+	->set project
+	$ gcloud config set project "Project_name"
+	
+	->set account
+	$ gcloud config set account "account_name"
+	
+	->set default region
+	$ gcloud config set region REGION
+	
+	->set default zone
+	$ gcloud config set zone ZONE
+	
+->switch between configurations
+gcloud config configurations activate CONFIGURATION_NAME
+
+
+

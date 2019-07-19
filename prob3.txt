@@ -1,0 +1,10 @@
+Problem 3:
+
+
+->list out the available API Services
+$ gcloud services list --available
+
+->list out enabled API services
+$ gcloud services list   (Since by default enabled flag is set)
+or
+$ gcloud services list --enabled

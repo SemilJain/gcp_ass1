@@ -1,0 +1,56 @@
+Create a json file.
+Create bucket and upload the json file.
+Go to Pubsub
+Create topic
+Go to Big query
+create dataset
+enter the name
+Go to Cloud Function
+Create a new function
+Enter the name
+Trigger: cloud pub/sub
+Select the topic created above
+runtime: python 3.7
+Put the following code in main.py
+
+//CODE 
+
+import base64
+from google.cloud import bigquery
+
+def hello_pubsub(event, context):
+    message = base64.b64decode(event['data']).decode('utf-8')
+    message_list = message.splitlines()
+    bucket_name = message_list[0]
+    object_path = message_list[1]
+    print(bucket_name)
+    print(object_path)
+    client = bigquery.Client()
+    dataset_ref = client.dataset('nishita_bq')
+    job_config = bigquery.LoadJobConfig()
+    
+    job_config.autodetect = True
+    
+    job_config.source_format = bigquery.SourceFormat.NEWLINE_DELIMITED_JSON
+    
+    uri  = "gs://" + bucket_name + "/" + object_path
+    load_job = client.load_table_from_uri(uri, dataset_ref.table("gcptable"), job_config=job_config)  # API request
+    print("Starting job {}".format(load_job.job_id))
+    load_job.result() 
+
+
+    
+Enter the following line in requirements.txt
+google-cloud-bigquery
+Click create
+Go to Pubsub topic created
+Publish message
+Enter the bucket name <Enter>
+Enter the object name (json file)
+Publish the message
+Go to Big query
+Go to table->gcp table will be created there
+Click on query table->put * after select
+Run the query
+Table will be displayed
+
